@@ -13,13 +13,9 @@
     "selectedColor": "#000",
     "list":[{
        "pagePath": "pages/index/index",
-       "iconPath": "img/icons/icon1.png",
-       "selectedIconPath": "img/icons/icon1_selecte.png",
        "text": "首页"
     },{
       "pagePath": "pages/logs/logs",
-      "iconPath": "img/icons/icon2.png",
-      "selectedIconPath":"img/icons/icon2_selecte.png",
       "text": "日志"
     }]
   },
