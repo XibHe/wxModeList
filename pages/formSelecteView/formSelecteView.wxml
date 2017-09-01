@@ -1,0 +1,102 @@
+<!--infoQuery.wxml-->
+<!--新建西药/中药信息查询页面-->
+<view class="add-page">
+
+   <view class="mod-a">
+    
+      <view class="mod t-sign-time">
+          <text>类型</text>
+          <text class="value">西药/中成药</text>
+      </view>
+
+      <view class="mod t-sign-time">
+          <text>药品名称</text>
+          <text class="value">注射器</text>
+      </view>
+
+       <view class="mod t-sign-time">
+          <text>商品条码</text>
+          <text class="value">67882932222222222r33ddfdfdfdf</text>
+      </view>
+
+   </view>
+
+   <view class="mod-a mt20">
+   
+      <view class="mod t-sign-time">
+          <text>剂型</text>
+          <text class="value"></text>
+          <button class="btn" catchtap="powerDrawer" data-statu="open">butto3n</button>
+      </view>
+
+      <view class="mod t-sign-time">
+          <text>功效</text>
+          <text class="value"></text>
+          <button class="effectBtn" catchtap="effectTap"   data-statu="open">but4ton</button>
+      </view>
+       
+      <view class="mod t-sign-time">
+          <text>生产企业</text>
+          <text class="value"></text>
+      </view>
+
+      <view class="mod t-sign-time">
+          <text>用法用量</text>
+          <text class="value"></text>
+      </view>
+
+      <view class="mod t-sign-time">
+          <text>批准文号</text>
+          <text class="value"></text>
+      </view>
+
+   </view>
+
+   <view class="mod-a mt20">
+
+      <view class="mod t-sign-time">
+          <text>标签</text>
+          <text class="value">{{mydata}}</text>
+          <button bindtap="classifyTap"> 分类标签 </button>
+      </view>
+
+   </view>
+
+
+<!--剂型选择 mask-->  
+ <view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus1}}"></view>   
+<!--content-->  
+<!--使用animation属性指定需要执行的动画-->  
+<view animation="{{animationData}}" class="drawer_formBox" wx:if="{{showModalStatus1}}">  
+  <!--drawer content-->  
+  <view class="drawer_fromTitle">
+     <view class="btn_cancel" bindtap="powerDrawer" data-statu="close">取消</view>
+     <text>剂型选择</text>
+     <view class="btn_sure" bindtap="powerDrawer" data-statu="close">确定</view>
+  </view>  
+
+  <view class="drawer_formContent">
+     <block wx:for="{{['注射剂1', '注射剂2', '注射剂3', '注射剂4', '注射剂', '注射剂', '注射剂','注射剂', '注射剂', '注射剂', '注射剂', '注射剂', '注射剂', '注射剂']}}">
+        <text data-index="{{index}}" class="view-list {{index ==activeItemIndex ? 'active':''}}" bindtap="formTapClick">{{item}}</text>
+     </block>
+  </view>  
+</view>  
+
+
+<!--功效 mask-->  
+ <view class="drawer_screen" bindtap="effectTap" data-statu="close" wx:if="{{showModalStatus2}}"></view>   
+<!--content-->  
+<!--使用animation属性指定需要执行的动画-->  
+<view animation="{{effectAnimationData}}" class="drawer_effectBox" wx:if="{{showModalStatus2}}">  
+  <!--drawer content-->  
+  <view class="drawer_effectTitle">
+     <view class="btn_cancel" bindtap="effectTap" data-statu="close">取消</view>
+     <text>药品功效</text>
+     <view class="btn_sure" bindtap="effectTap" data-statu="close">确定</view>
+  </view>  
+  <view class="drawer_effectContent" style="z-index: 999">
+      <textarea value="ghegheghehg" auto-focus/> 
+  </view>  
+    
+</view>  
+</view>

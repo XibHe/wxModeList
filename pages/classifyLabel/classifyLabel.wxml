@@ -1,0 +1,22 @@
+<!--classifyLabel.wxml-->
+
+<view class="page">
+ <view class="useWrap" style="height:{{winHeight-70}}px;overflow:hidden;">
+    <view  style="height:{{winHeight-70}}px;overflow:scroll;">
+       <view data-index="{{index}}" class="mod t-sign-time" wx:for="{{classifyList}}" bindtap="selectedTap">
+         <text data-index="{{index}}" class="content {{index == activeItemIndex ? 'textSelected':'textStyle'}}">{{item}}</text>
+
+         <image class="normal {{index == activeItemIndex ? 'selecteIcon':'unselecteIcon'}}" src="/img/selected.png" mode="center"></image>  
+      </view> 
+   </view>   
+</view>
+</view>
+
+<button class="sureBtn" bindtap="sureBtnClick">确定</button> 
+
+<!-- <image style="width: 20%; height:20%" mode="aspectFit" src="../image/code.jpg" /> -->
+
+ 
+
+ 
+<!-- <text data-index="{{index}}" class="view-list {{index ==activeItemIndex ? 'active':''}}" bindtap="formTapClick">{{item}}</text> -->
