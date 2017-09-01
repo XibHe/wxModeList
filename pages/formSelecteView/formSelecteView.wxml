@@ -23,16 +23,16 @@
 
    <view class="mod-a mt20">
    
-      <view class="mod t-sign-time">
+      <view class="mod t-sign-time" bindtap ='powerDrawer' data-statu="open">
           <text>剂型</text>
           <text class="value"></text>
-          <button class="btn" catchtap="powerDrawer" data-statu="open">butto3n</button>
+          <image class='arrowImg' src='/img/arrow.png'></image>
       </view>
 
-      <view class="mod t-sign-time">
+      <view class="mod t-sign-time" catchtap="effectTap"  data-statu="open">
           <text>功效</text>
           <text class="value"></text>
-          <button class="effectBtn" catchtap="effectTap"   data-statu="open">but4ton</button>
+          <image class='arrowImg' src='/img/arrow.png'></image>
       </view>
        
       <view class="mod t-sign-time">
@@ -54,10 +54,10 @@
 
    <view class="mod-a mt20">
 
-      <view class="mod t-sign-time">
-          <text>标签</text>
+      <view class="mod t-sign-time" bindtap="classifyTap">
+          <text>分类标签</text>
           <text class="value">{{mydata}}</text>
-          <button bindtap="classifyTap"> 分类标签 </button>
+          <image class='arrowImg' src='/img/arrow.png'></image>
       </view>
 
    </view>
